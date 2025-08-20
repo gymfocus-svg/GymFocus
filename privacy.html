@@ -1,33 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GYMFOCUS – Politique de confidentialité</title>
-  <meta name="description" content="Politique de confidentialité GYMFOCUS.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TITRE DE LA PAGE — GYMFOCUS</title>
+  <meta name="description" content="Résumé court de la page légale." />
+  <link rel="icon" href="/favicon.png" />
   <style>
-    body{margin:0;font-family:Arial,sans-serif;background:#121212;color:#f0f0f0}
-    header,footer{background:#1e1e1e;padding:16px;text-align:center}
-    a{color:#b180f5;text-decoration:none} a:hover{text-decoration:underline}
-    main{max-width:900px;margin:40px auto;padding:0 16px}
-    h1,h2{color:#b180f5}
+    :root{--bg:#0e0e12;--text:#e9e9ef;--muted:#b7b7c6;--card:rgba(255,255,255,.06);--stroke:rgba(255,255,255,.08);--primary:#9b6bff}
+    *{box-sizing:border-box} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;background:var(--bg);color:var(--text)}
+    header,footer{position:sticky;top:0;background:rgba(18,18,26,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--stroke)}
+    .wrap{max-width:900px;margin:0 auto;padding:0 18px}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    a{color:var(--primary);text-decoration:none}
+    main{max-width:900px;margin:32px auto;padding:0 18px}
+    h1{margin:4px 0 14px}
+    .meta{color:var(--muted);font-size:14px;margin-bottom:18px}
+    .paper{background:var(--card);border:1px solid var(--stroke);border-radius:18px;padding:22px}
+    ul{margin:0 0 12px 18px}
+    footer{border-top:1px solid var(--stroke);position:static;margin-top:30px}
+    footer .inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:16px 0;color:var(--muted)}
   </style>
 </head>
 <body>
-  <header><a href="./index.html">← Pages légales</a> · <a href="https://gymfocus.eu">Accueil</a></header>
-  <main>
-    <h1>Politique de confidentialité</h1>
-    <p>Dernière mise à jour : <strong>20 août 2025</strong></p>
+  <header>
+    <div class="wrap nav">
+      <a href="https://gymfocus.eu" style="color:#fff;font-weight:700;text-decoration:none">GYMFOCUS</a>
+      <nav style="display:flex;gap:16px">
+        <a href="./index.html">Pages légales</a>
+        <a href="https://gymfocus.eu/#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <!-- Colle ici TON texte existant -->
-    <h2>1. Données collectées</h2>
-    <p>(Ton contenu…)</p>
-    <h2>2. Finalités</h2>
-    <p>(…)</p>
-    <h2>3. Droits des utilisateurs</h2>
-    <p>(…)</p>
-    <p>Contact : <a href="mailto:support@gymfocus.app">support@gymfocus.app</a></p>
+  <main>
+    <h1>TITRE DE LA PAGE</h1>
+    <div class="meta">Dernière mise à jour : 6 janvier 2025</div>
+
+    <div class="paper">
+      <!-- COLLE ICI TON CONTENU EXISTANT SANS LE MODIFIER -->
+      <!-- listes à puces, paragraphes, etc. -->
+    </div>
   </main>
-  <footer>© 2025 GYMFOCUS</footer>
+
+  <footer>
+    <div class="wrap inner">
+      <small>© 2025 GYMFOCUS</small>
+      <div style="display:flex;gap:14px">
+        <a href="./privacy.html">Confidentialité</a>
+        <a href="./terms.html">CGU</a>
+        <a href="./refund-policy.html">Remboursements</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
