@@ -1,32 +1,239 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GYMFOCUS – Pages légales</title>
-  <meta name="description" content="Pages légales GYMFOCUS : Politique de confidentialité, Conditions d’utilisation, Politique de remboursement.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>GYMFOCUS — Concentrez-vous sur l’essentiel</title>
+  <meta name="description" content="GYMFOCUS transforme votre téléphone en dumbphone pendant l’entraînement, pour une concentration maximale et un suivi simple de vos séries." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GYMFOCUS — Restez focus à l’entraînement" />
+  <meta property="og:description" content="Mode sans distractions, suivi des séries, statistiques. Essayez GYMFOCUS." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://gymfocus.eu/" />
+  <meta property="og:image" content="https://gymfocus.eu/og-image.jpg" />
+
+  <link rel="icon" href="favicon.png" />
+
   <style>
-    body{margin:0;font-family:Arial,sans-serif;background:#121212;color:#f0f0f0}
-    header,footer{background:#1e1e1e;padding:16px;text-align:center}
-    a{color:#b180f5;text-decoration:none} a:hover{text-decoration:underline}
-    main{max-width:900px;margin:40px auto;padding:0 16px}
-    h1{color:#b180f5}
-    ul{line-height:2}
+    :root{
+      --bg:#0e0e12;
+      --bg-2:#12121a;
+      --text:#e9e9ef;
+      --muted:#b7b7c6;
+      --primary:#9b6bff;
+      --primary-2:#7b4ef0;
+      --card:rgba(255,255,255,0.06);
+      --stroke:rgba(255,255,255,0.08);
+      --shadow:0 10px 30px rgba(0,0,0,0.35);
+      --radius:22px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+      color:var(--text); background:radial-gradient(80vmax 80vmax at 80% -10%, rgba(155,107,255,0.16), transparent 60%),
+                        radial-gradient(70vmax 70vmax at -10% 110%, rgba(123,78,240,0.14), transparent 60%),
+                        var(--bg);
+    }
+
+    /* Container */
+    .wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+
+    /* Header */
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(180%) blur(10px);
+      background:linear-gradient(to bottom, rgba(18,18,26,0.85), rgba(18,18,26,0.55)); border-bottom:1px solid var(--stroke)}
+    .nav{display:flex; align-items:center; justify-content:space-between; height:72px}
+    .logo{display:flex; align-items:center; gap:12px; text-decoration:none; color:var(--text)}
+    .logo img{height:36px; width:36px; border-radius:10px}
+    .logo span{font-weight:700; letter-spacing:.4px}
+    .links{display:flex; gap:18px; align-items:center}
+    .links a{color:var(--muted); text-decoration:none; font-weight:600}
+    .links a:hover{color:var(--text)}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 18px; border-radius:999px; font-weight:700; text-decoration:none; border:1px solid var(--stroke); background:linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03)); box-shadow:var(--shadow)}
+    .btn--primary{background:linear-gradient(180deg, var(--primary), var(--primary-2)); border:none; color:#fff}
+    .btn--ghost{color:var(--text)}
+    .burger{display:none; background:none; border:0; color:var(--text); font-size:24px}
+
+    /* Mobile menu */
+    @media (max-width:860px){
+      .links{display:none}
+      .burger{display:block}
+      .mobile{display:none; position:fixed; inset:72px 0 0 0; background:var(--bg-2); border-top:1px solid var(--stroke)}
+      .mobile.open{display:block}
+      .mobile .inner{padding:16px}
+      .mobile a{display:block; padding:14px 12px; color:var(--muted); text-decoration:none; border-radius:12px}
+      .mobile a:hover{background:var(--card); color:var(--text)}
+      .mobile .cta{margin-top:8px; display:flex; gap:10px}
+    }
+
+    /* Hero */
+    .hero{padding:90px 0 40px}
+    .hero .grid{display:grid; grid-template-columns: 1.2fr .9fr; gap:28px; align-items:center}
+    .hero h1{font-size: clamp(32px, 5vw, 56px); line-height:1.05; margin:0 0 14px; letter-spacing:.2px}
+    .sub{color:var(--muted); font-size: clamp(16px, 2.2vw, 18px)}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border-radius:999px; font-size:13px; color:#fff; background:linear-gradient(90deg, var(--primary), var(--primary-2)); border:1px solid rgba(255,255,255,0.12)}
+    .hero .actions{display:flex; gap:14px; margin-top:22px; flex-wrap:wrap}
+    .card{background:var(--card); border:1px solid var(--stroke); border-radius:var(--radius); box-shadow:var(--shadow)}
+
+    /* Features */
+    .features{padding:40px 0 10px}
+    .kpis{display:grid; grid-template-columns: repeat(3, 1fr); gap:16px; margin-top:22px}
+    .kpis .card{padding:18px}
+    .kpis h3{margin:0 0 6px; font-size:18px}
+    .kpis p{margin:0; color:var(--muted); font-size:14px}
+    .bullets{display:grid; grid-template-columns: repeat(2, 1fr); gap:16px; margin-top:18px}
+    .bullets .item{padding:18px}
+    .bullets .item strong{display:block; margin-bottom:6px}
+
+    /* Gallery */
+    .gallery{margin-top:26px; display:grid; grid-template-columns: repeat(3, 1fr); gap:12px}
+    .shot{aspect-ratio: 9/19; border-radius:16px; overflow:hidden; border:1px solid var(--stroke); background:#0b0b10}
+    .shot img{width:100%; height:100%; object-fit:cover; display:block; opacity:.92}
+
+    /* Contact */
+    .contact{padding:40px 0 80px}
+    .contact .card{padding:22px; display:flex; flex-wrap:wrap; align-items:center; gap:14px; justify-content:space-between}
+    .contact p{margin:0; color:var(--muted)}
+
+    /* Footer */
+    footer{border-top:1px solid var(--stroke); padding:18px 0 40px; color:var(--muted)}
+    footer .grid{display:flex; justify-content:space-between; align-items:center; gap:20px; flex-wrap:wrap}
+    footer a{color:var(--muted); text-decoration:none}
+    footer a:hover{color:var(--text)}
+
+    /* Cards hover */
+    .card:hover{transform:translateY(-2px); transition: transform .2s ease}
+
+    /* Responsive tweaks */
+    @media (max-width:960px){
+      .hero .grid{grid-template-columns:1fr}
+      .gallery{grid-template-columns: repeat(2, 1fr)}
+      .kpis{grid-template-columns:1fr 1fr}
+      .bullets{grid-template-columns:1fr}
+    }
+    @media (max-width:600px){
+      .gallery{grid-template-columns:1fr}
+      .kpis{grid-template-columns:1fr}
+    }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <a href="https://gymfocus.eu">← Retour à gymfocus.eu</a>
+    <div class="wrap nav">
+      <a class="logo" href="#accueil" aria-label="GYMFOCUS Accueil">
+        <img src="logo.png" alt="">
+        <span>GYMFOCUS</span>
+      </a>
+      <nav class="links" aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#features">Fonctionnalités</a>
+        <a href="#contact">Contact</a>
+        <a href="https://ton-username.github.io/gymfocus-legal/">Légal</a>
+        <a class="btn btn--ghost" href="mailto:support@gymfocus.app">Support</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu">☰</button>
+    </div>
+    <div class="mobile" id="mobile">
+      <div class="inner wrap">
+        <a href="#accueil" onclick="closeMenu()">Accueil</a>
+        <a href="#features" onclick="closeMenu()">Fonctionnalités</a>
+        <a href="#contact" onclick="closeMenu()">Contact</a>
+        <a href="https://ton-username.github.io/gymfocus-legal/" onclick="closeMenu()">Légal</a>
+        <div class="cta">
+          <a class="btn btn--primary" href="#" aria-label="Bientôt sur Google Play">Bientôt sur Google Play</a>
+          <a class="btn btn--ghost" href="mailto:support@gymfocus.app">Support</a>
+        </div>
+      </div>
+    </div>
   </header>
-  <main>
-    <h1>Pages légales</h1>
-    <ul>
-      <li><a href="./privacy.html">Politique de confidentialité</a></li>
-      <li><a href="./terms.html">Conditions d’utilisation</a></li>
-      <li><a href="./refund-policy.html">Politique de remboursement</a></li>
-    </ul>
-    <p>Dernière mise à jour : <strong>20 août 2025</strong></p>
+
+  <!-- Hero -->
+  <main id="accueil" class="hero">
+    <div class="wrap">
+      <div class="grid">
+        <section>
+          <span class="pill">🎯 Restez concentré, progressez plus vite</span>
+          <h1>Coupez les distractions. <br/>Suivez vos séries. <br/>Progressez.</h1>
+          <p class="sub">
+            GYMFOCUS transforme votre téléphone en <em>dumbphone</em> pendant la séance, enregistre vos séries, et vous guide vers l’entraînement suivant sans perdre le rythme.
+          </p>
+          <div class="actions">
+            <a class="btn btn--primary" href="#" aria-label="Bouton Google Play">Télécharger (bientôt)</a>
+            <a class="btn" href="https://ton-username.github.io/gymfocus-legal/privacy.html">Pages légales</a>
+          </div>
+        </section>
+
+        <!-- Card visuelle à droite -->
+        <aside class="card" style="padding:18px;">
+          <div class="shot">
+            <!-- Remplace par une capture de l’app -->
+            <img src="screenshot-01.jpg" alt="Aperçu GYMFOCUS">
+          </div>
+          <div class="gallery">
+            <div class="shot"><img src="screenshot-02.jpg" alt=""></div>
+            <div class="shot"><img src="screenshot-03.jpg" alt=""></div>
+            <div class="shot"><img src="screenshot-04.jpg" alt=""></div>
+          </div>
+        </aside>
+      </div>
+    </div>
   </main>
-  <footer>© 2025 GYMFOCUS</footer>
-</body>
-</html>
+
+  <!-- Features -->
+  <section id="features" class="features">
+    <div class="wrap">
+      <div class="kpis">
+        <div class="card">
+          <h3>🚫 Zéro distractions</h3>
+          <p>Mode focus : notifications et apps bloquées pendant la séance.</p>
+        </div>
+        <div class="card">
+          <h3>🔁 Suivi fluide</h3>
+          <p>Validez chaque série et préparez la suivante sans toucher au reste.</p>
+        </div>
+        <div class="card">
+          <h3>📈 Progrès visibles</h3>
+          <p>Historique clair et stats simples pour tenir la cadence.</p>
+        </div>
+      </div>
+
+      <div class="bullets">
+        <div class="card item">
+          <strong>Design épuré</strong>
+          <span>Interface pensée pour la salle : visible, rapide, sans friction.</span>
+        </div>
+        <div class="card item">
+          <strong>Fonctionne hors ligne</strong>
+          <span>Vos séries sont enregistrées même sans réseau, puis synchronisées.</span>
+        </div>
+        <div class="card item">
+          <strong>Respect de la vie privée</strong>
+          <span>Politique claire, aucune revente de données, Stripe pour les paiements.</span>
+        </div>
+        <div class="card item">
+          <strong>Support réactif</strong>
+          <span>Contact direct : <a href="mailto:support@gymfocus.app">support@gymfocus.app</a></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="card">
+        <p>Une question, un souci, une idée de feature ?</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="mailto:support@gymfocus.app">Contact support</a>
+          <a class="btn" href="https://ton-username.github.io/gymfocus-legal/terms.html">Conditions d’utilisation</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div cla
