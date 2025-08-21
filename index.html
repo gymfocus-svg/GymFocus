@@ -6,188 +6,139 @@
   <title>GymFocus - Restez concentré sur vos entraînements</title>
   <style>
     body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: #0d0b14;
-      color: #fff;
+      padding: 0;
+      background-color: #0a0a0a;
+      color: #a259ff;
       line-height: 1.6;
     }
-
-    /* Menu */
-    nav {
-      background: #1a1525;
-      padding: 15px 40px;
+    header {
+      background: #111;
+      padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.6);
     }
-    nav .logo {
-      font-size: 1.6rem;
-      font-weight: bold;
-      color: #9b5de5;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
+    header h1 {
       margin: 0;
-      padding: 0;
+      font-size: 1.8rem;
+      color: #a259ff;
     }
-    nav ul li a {
-      color: #fff;
+    nav a {
+      color: #a259ff;
       text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
       transition: color 0.3s;
     }
-    nav ul li a:hover {
-      color: #9b5de5;
+    nav a:hover {
+      color: #fff;
     }
-
-    /* Hero */
     .hero {
       text-align: center;
-      padding: 100px 20px 70px;
-      background: linear-gradient(135deg, #9b5de5, #6a4c93);
+      padding: 80px 20px;
     }
-    .hero h1 {
-      font-size: 3rem;
+    .hero h2 {
+      font-size: 2.2rem;
       margin-bottom: 20px;
+      color: #a259ff;
     }
     .hero p {
-      font-size: 1.2rem;
-      max-width: 650px;
+      max-width: 700px;
       margin: auto;
-      color: #f3e9ff;
+      font-size: 1.1rem;
+      color: #ddd;
     }
-    .btn {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 14px 30px;
-      background: #fff;
-      color: #6a4c93;
-      text-decoration: none;
-      border-radius: 10px;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: all 0.3s;
-    }
-    .btn:hover {
-      background: #f3e9ff;
-      transform: translateY(-2px);
-    }
-
-    /* Features */
     .features {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 70px 40px;
-      background: #16131f;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
     }
-    .feature-card {
-      background: #1f1a2e;
-      padding: 30px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    .card {
+      background: #161616;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
       transition: transform 0.3s;
     }
-    .feature-card:hover {
-      transform: translateY(-8px);
+    .card:hover {
+      transform: translateY(-5px);
     }
-    .feature-card h3 {
-      color: #9b5de5;
-      margin-bottom: 15px;
+    .card h3 {
+      margin-top: 0;
+      color: #a259ff;
     }
-    .feature-card p {
-      color: #cfc6dd;
+    .card p {
+      color: #ccc;
       font-size: 0.95rem;
     }
-
-    /* Call to action */
-    .cta {
-      text-align: center;
-      padding: 80px 20px;
-      background: linear-gradient(135deg, #6a4c93, #9b5de5);
-    }
-    .cta h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-    }
-    .cta p {
-      font-size: 1.1rem;
-      margin-bottom: 25px;
-      color: #f3e9ff;
-    }
-
-    /* Footer */
     footer {
-      background: #1a1525;
       text-align: center;
-      padding: 20px;
+      padding: 30px 15px;
+      background: #111;
+      margin-top: 40px;
       font-size: 0.9rem;
-      color: #b8a9ce;
+    }
+    footer a {
+      color: #a259ff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>GYMFOCUS</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="privacy.html">Confidentialité</a>
+      <a href="terms.html">Conditions</a>
+      <a href="refund-policy.html">Remboursement</a>
+    </nav>
+  </header>
 
-  <!-- Menu -->
-  <nav>
-    <div class="logo">GymFocus</div>
-    <ul>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="privacy.html">Confidentialité</a></li>
-      <li><a href="terms.html">Conditions</a></li>
-      <li><a href="refund-policy.html">Remboursements</a></li>
-    </ul>
-  </nav>
-
-  <!-- Hero -->
   <section class="hero">
-    <h1>Concentrez-vous sur vos entraînements</h1>
-    <p>GymFocus transforme votre téléphone en mode "dumbphone" pendant vos séances.  
-    Suivez vos séries, évitez les distractions et améliorez vos performances.  
-    Conçu pour tous les sportifs, du débutant au professionnel.</p>
-    <a href="#" class="btn">Télécharger l’application</a>
+    <h2>Restez concentré sur vos entraînements</h2>
+    <p>GymFocus transforme votre téléphone en un outil minimaliste dédié au sport. Plus de distractions, seulement vous, vos séries, et vos objectifs. Conçu pour les sportifs exigeants qui veulent aller droit au but.</p>
   </section>
 
-  <!-- Features -->
   <section class="features">
-    <div class="feature-card">
-      <h3>Mode Anti-Distraction</h3>
-      <p>Activez un mode qui bloque toutes les notifications et distractions extérieures.  
-      Restez 100% concentré sur vos objectifs.</p>
+    <div class="card">
+      <h3>Mode « Dumbphone »</h3>
+      <p>Pendant vos séances, votre smartphone devient un simple chronomètre et tracker de séries. Plus de réseaux sociaux, plus de distractions.</p>
     </div>
-    <div class="feature-card">
-      <h3>Suivi des Séries</h3>
-      <p>Comptez vos séries facilement en un clic, sans quitter votre flow.  
-      Une approche simple et efficace.</p>
+    <div class="card">
+      <h3>Suivi intelligent des séries</h3>
+      <p>Appuyez après chaque série. L’application enregistre votre progression et vous demande automatiquement combien de séries sont prévues pour l’exercice suivant.</p>
     </div>
-    <div class="feature-card">
-      <h3>Planification Intelligente</h3>
-      <p>Anticipez vos prochains exercices : GymFocus vous guide pour rester régulier et discipliné.</p>
+    <div class="card">
+      <h3>Conçu pour tous les sportifs</h3>
+      <p>Que vous soyez débutant ou athlète confirmé, GymFocus s’adapte à votre rythme et vous aide à rester concentré sur vos performances.</p>
     </div>
-    <div class="feature-card">
-      <h3>Pour Tous les Sportifs</h3>
-      <p>Que vous soyez amateur ou professionnel, GymFocus s’adapte à votre niveau et vous aide à progresser.</p>
+    <div class="card">
+      <h3>Expérience minimaliste</h3>
+      <p>Interface claire, design épuré, et fonctionnalités pensées uniquement pour la salle de sport. Rien de plus, rien de moins.</p>
     </div>
   </section>
 
-  <!-- Call to Action -->
-  <section class="cta">
-    <h2>Prêt à booster vos performances ?</h2>
-    <p>Rejoignez des sportifs qui ont choisi la concentration et la discipline.  
-    Téléchargez GymFocus dès aujourd’hui.</p>
-    <a href="#" class="btn">Télécharger l’application</a>
-  </section>
-
-  <!-- Footer -->
   <footer>
-    © 2025 GymFocus. Tous droits réservés.
+    <p>&copy; 2025 GymFocus. Tous droits réservés.</p>
+    <p>
+      <a href="privacy.html">Confidentialité</a> |
+      <a href="terms.html">Conditions</a> |
+      <a href="refund-policy.html">Remboursement</a>
+    </p>
   </footer>
-
 </body>
 </html>
