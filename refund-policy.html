@@ -1,68 +1,120 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Remboursement - GYMFOCUS</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de remboursement — GYMFOCUS</title>
+  <meta name="description" content="Politique de remboursement et d'annulation des abonnements GYMFOCUS. Dernière mise à jour : 6 janvier 2025." />
+  <link rel="icon" href="favicon.png" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+    :root{
+      --bg:#0a0a0a;
+      --panel:#141414;
+      --text:#e9e9ef;
+      --muted:#c9c9d3;
+      --primary:#a259ff; /* violet DA */
+      --stroke:#222;
+      --radius:14px;
     }
-    header {
-      background-color: #222;
-      padding: 1rem;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      color: #00aaff;
-    }
-    main {
-      flex: 1;
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    footer {
-      background-color: #222;
-      padding: 1rem;
-      text-align: center;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    /* Header / nav */
+    header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:blur(8px);border-bottom:1px solid var(--stroke)}
+    .bar{max-width:1000px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:800;letter-spacing:.4px;color:var(--primary);text-decoration:none}
+    nav a{color:var(--text);opacity:.9;text-decoration:none;margin-left:18px}
+    nav a:hover{color:var(--primary)}
+    /* Main */
+    main{max-width:900px;margin:32px auto;padding:0 18px}
+    h1{font-size:clamp(24px,4.2vw,34px);margin:4px 0 8px;color:var(--primary)}
+    h2{font-size:clamp(18px,3.4vw,22px);margin:28px 0 8px;color:var(--primary)}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .paper{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);padding:20px}
+    ul,ol{margin:0 0 10px 20px}
+    li{margin:6px 0}
+    a{color:var(--primary)}
+    /* Footer */
+    footer{border-top:1px solid var(--stroke);margin-top:34px}
+    .foot{max-width:1000px;margin:0 auto;padding:16px 18px;color:#bdbdcc;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+    .foot a{color:var(--primary);text-decoration:none}
+    .foot a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
-    <h1>GYMFOCUS</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="privacy.html">Confidentialité</a>
-      <a href="refund-policy.html">Remboursements</a>
-      <a href="terms.html">Conditions</a>
-    </nav>
+    <div class="bar">
+      <a class="logo" href="index.html">GYMFOCUS</a>
+      <nav aria-label="Navigation">
+        <a href="index.html">Accueil</a>
+        <a href="privacy.html">Confidentialité</a>
+        <a href="terms.html">Conditions</a>
+        <a href="refund-policy.html" aria-current="page">Remboursement</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <h2>Politique de Remboursement</h2>
-    <p>Nous faisons tout notre possible pour vous offrir la meilleure expérience possible sur GYMFOCUS.</p>
-    <h3>Abonnements</h3>
-    <p>Les abonnements achetés via Google Play ou App Store suivent la politique de remboursement respective de la plateforme.</p>
-    <h3>Cas particuliers</h3>
-    <p>Si vous rencontrez un problème technique empêchant l’utilisation normale de l’application, contactez notre support afin d’étudier un remboursement exceptionnel.</p>
+    <h1>Politique de remboursement</h1>
+    <p class="lead">
+      Informations importantes concernant les remboursements et annulations d'abonnements GymFocus.<br>
+      <strong>Dernière mise à jour : 6 janvier 2025</strong>
+    </p>
+
+    <div class="paper">
+      <h2>Politique de non-remboursement</h2>
+      <p>Les abonnements GymFocus ne sont pas remboursables. Cette politique s'applique à tous nos abonnements premium, qu'ils soient mensuels ou annuels.
+      Votre accès aux fonctionnalités Premium reste actif jusqu'à la fin de la période déjà payée, même après annulation.</p>
+
+      <h2>Gestion des abonnements</h2>
+      <ul>
+        <li>Vous pouvez annuler votre abonnement à tout moment depuis l'application</li>
+        <li>L'annulation prend effet à la fin de la période de facturation en cours</li>
+        <li>Aucun remboursement partiel n'est accordé pour la période en cours</li>
+        <li>Vous conservez l'accès Premium jusqu'à l'expiration de votre abonnement</li>
+        <li>Le renouvellement automatique sera désactivé après annulation</li>
+      </ul>
+
+      <h2>Périodes de facturation</h2>
+      <ul>
+        <li>Abonnement mensuel : facturation tous les 30 jours</li>
+        <li>Abonnement annuel : facturation tous les 365 jours</li>
+        <li>Les changements d'abonnement prennent effet au prochain cycle</li>
+        <li>Aucun remboursement au prorata lors de changements de plan</li>
+        <li>Les taxes applicables sont incluses dans le prix affiché</li>
+      </ul>
+
+      <h2>Exceptions et cas particuliers</h2>
+      <ul>
+        <li>Erreurs techniques de notre part : remboursement possible</li>
+        <li>Facturation en double : correction et remboursement automatiques</li>
+        <li>Problèmes liés aux stores (Apple/Google) : contactez le support du store</li>
+        <li>Demandes spéciales : évaluées au cas par cas par notre équipe</li>
+        <li>Fraude ou utilisation abusive : aucun remboursement</li>
+      </ul>
+
+      <h2>Comment annuler votre abonnement</h2>
+      <ol>
+        <li>Ouvrez l'application GymFocus</li>
+        <li>Allez dans «&nbsp;Paramètres&nbsp;» puis «&nbsp;Abonnement&nbsp;»</li>
+        <li>Appuyez sur «&nbsp;Gérer l'abonnement&nbsp;»</li>
+        <li>Suivez les instructions pour annuler</li>
+      </ol>
+
+      <h2>Questions sur les remboursements&nbsp;?</h2>
+      <p>Si vous avez des questions concernant cette politique de remboursement ou si vous pensez être dans un cas exceptionnel, n'hésitez pas à contacter notre équipe de support à :</p>
+      <p><strong>Support 100% digital – <a href="mailto:contactgymfocus@gmail.com">contactgymfocus@gmail.com</a></strong></p>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 GYMFOCUS - Tous droits réservés
+    <div class="foot">
+      <small>© 2025 GYMFOCUS — Tous droits réservés</small>
+      <div>
+        <a href="privacy.html">Politique de confidentialité</a> ·
+        <a href="terms.html">Conditions d’utilisation</a> ·
+        <a href="refund-policy.html">Politique de remboursement</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
