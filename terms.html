@@ -1,137 +1,134 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conditions d'utilisation - GymFocus</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conditions d'utilisation — GYMFOCUS</title>
+  <meta name="description" content="Conditions d'utilisation de l'application GymFocus. Dernière mise à jour : 6 janvier 2025." />
+  <link rel="icon" href="favicon.png" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #a259ff;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --bg:#0a0a0a;
+      --panel:#141414;
+      --text:#e9e9ef;
+      --muted:#c9c9d3;
+      --primary:#a259ff;
+      --stroke:#222;
+      --radius:14px;
     }
-    header {
-      background-color: #1e1e1e;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #a259ff;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    h2 {
-      color: #ffffff;
-      border-bottom: 2px solid #a259ff;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-    ul {
-      margin: 10px 0 20px 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    footer {
-      background-color: #1e1e1e;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      color: #777;
-    }
-    a {
-      color: #a259ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:blur(8px);border-bottom:1px solid var(--stroke)}
+    .bar{max-width:1000px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:800;letter-spacing:.4px;color:var(--primary);text-decoration:none}
+    nav a{color:var(--text);opacity:.9;text-decoration:none;margin-left:18px}
+    nav a:hover{color:var(--primary)}
+    main{max-width:900px;margin:32px auto;padding:0 18px}
+    h1{font-size:clamp(24px,4.2vw,34px);margin:4px 0 8px;color:var(--primary)}
+    h2{font-size:clamp(18px,3.4vw,22px);margin:28px 0 8px;color:var(--primary)}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .paper{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);padding:20px}
+    ul,ol{margin:0 0 10px 20px}
+    li{margin:6px 0}
+    a{color:var(--primary)}
+    footer{border-top:1px solid var(--stroke);margin-top:34px}
+    .foot{max-width:1000px;margin:0 auto;padding:16px 18px;color:#bdbdcc;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+    .foot a{color:var(--primary);text-decoration:none}
+    .foot a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
-    <h1>Conditions d'utilisation</h1>
-    <p>Merci de lire attentivement avant d'utiliser GymFocus</p>
+    <div class="bar">
+      <a class="logo" href="index.html">GYMFOCUS</a>
+      <nav aria-label="Navigation">
+        <a href="index.html">Accueil</a>
+        <a href="privacy.html">Confidentialité</a>
+        <a href="terms.html" aria-current="page">Conditions</a>
+        <a href="refund-policy.html">Remboursement</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <p><em>Dernière mise à jour : 6 janvier 2025</em></p>
+    <h1>Conditions d'utilisation</h1>
+    <p class="lead"><em>Dernière mise à jour : 6 janvier 2025</em></p>
 
-    <h2>Acceptation des conditions</h2>
-    <ul>
-      <li>En accédant à GymFocus et en l'utilisant, vous acceptez d'être lié par ces conditions d'utilisation.</li>
-      <li>Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre application.</li>
-      <li>Nous nous réservons le droit de modifier ces conditions à tout moment.</li>
-      <li>Les modifications prendront effet dès leur publication dans l'application.</li>
-    </ul>
+    <div class="paper">
+      <h2>Acceptation des conditions</h2>
+      <ul>
+        <li>En accédant à GymFocus et en l'utilisant, vous acceptez d'être lié par ces conditions d'utilisation.</li>
+        <li>Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre application.</li>
+        <li>Nous nous réservons le droit de modifier ces conditions à tout moment.</li>
+        <li>Les modifications prendront effet dès leur publication dans l'application.</li>
+      </ul>
 
-    <h2>Description du service</h2>
-    <ul>
-      <li>GymFocus est une application de fitness qui vous aide à suivre vos entraînements.</li>
-      <li>Nous fournissons des outils pour enregistrer vos séries, exercices et progrès.</li>
-      <li>L'application propose des fonctionnalités gratuites et premium.</li>
-      <li>Nous nous efforçons de maintenir le service disponible, mais ne garantissons pas une disponibilité 100%.</li>
-    </ul>
+      <h2>Description du service</h2>
+      <ul>
+        <li>GymFocus est une application de fitness qui vous aide à suivre vos entraînements.</li>
+        <li>Nous fournissons des outils pour enregistrer vos séries, exercices et progrès.</li>
+        <li>L'application propose des fonctionnalités gratuites et premium.</li>
+        <li>Nous nous efforçons de maintenir le service disponible, mais ne garantissons pas une disponibilité 100%.</li>
+      </ul>
 
-    <h2>Abonnements et paiements</h2>
-    <ul>
-      <li>Les abonnements premium sont facturés mensuellement ou annuellement.</li>
-      <li>Les paiements sont traités par Stripe de manière sécurisée.</li>
-      <li>Vous pouvez annuler votre abonnement à tout moment depuis l'application.</li>
-      <li>Aucun remboursement n'est accordé pour les périodes déjà facturées.</li>
-      <li>Les prix peuvent changer avec un préavis de 30 jours.</li>
-    </ul>
+      <h2>Abonnements et paiements</h2>
+      <ul>
+        <li>Les abonnements premium sont facturés mensuellement ou annuellement.</li>
+        <li>Les paiements sont traités par Stripe de manière sécurisée.</li>
+        <li>Vous pouvez annuler votre abonnement à tout moment depuis l'application.</li>
+        <li>Aucun remboursement n'est accordé pour les périodes déjà facturées.</li>
+        <li>Les prix peuvent changer avec un préavis de 30 jours.</li>
+      </ul>
 
-    <h2>Utilisation acceptable</h2>
-    <ul>
-      <li>Vous devez utiliser l'application de manière légale et respectueuse.</li>
-      <li>Il est interdit de partager votre compte avec d'autres personnes.</li>
-      <li>Vous ne devez pas tenter de contourner les mesures de sécurité.</li>
-      <li>L'utilisation abusive ou frauduleuse peut entraîner la suspension du compte.</li>
-      <li>Vous êtes responsable de la sécurité de vos identifiants de connexion.</li>
-    </ul>
+      <h2>Utilisation acceptable</h2>
+      <ul>
+        <li>Vous devez utiliser l'application de manière légale et respectueuse.</li>
+        <li>Il est interdit de partager votre compte avec d'autres personnes.</li>
+        <li>Vous ne devez pas tenter de contourner les mesures de sécurité.</li>
+        <li>L'utilisation abusive ou frauduleuse peut entraîner la suspension du compte.</li>
+        <li>Vous êtes responsable de la sécurité de vos identifiants de connexion.</li>
+      </ul>
 
-    <h2>Limitation de responsabilité</h2>
-    <ul>
-      <li>GymFocus est fourni 'en l'état' sans garantie d'aucune sorte.</li>
-      <li>Nous ne sommes pas responsables des blessures liées à l'exercice physique.</li>
-      <li>Consultez un professionnel de santé avant de commencer un programme d'exercice.</li>
-      <li>Notre responsabilité est limitée au montant payé pour le service.</li>
-      <li>Nous ne garantissons pas l'exactitude des données de fitness.</li>
-    </ul>
+      <h2>Limitation de responsabilité</h2>
+      <ul>
+        <li>GymFocus est fourni 'en l'état' sans garantie d'aucune sorte.</li>
+        <li>Nous ne sommes pas responsables des blessures liées à l'exercice physique.</li>
+        <li>Consultez un professionnel de santé avant de commencer un programme d'exercice.</li>
+        <li>Notre responsabilité est limitée au montant payé pour le service.</li>
+        <li>Nous ne garantissons pas l'exactitude des données de fitness.</li>
+      </ul>
 
-    <h2>Propriété intellectuelle</h2>
-    <p>
-      Tous les contenus de GymFocus (textes, images, logos, code) sont protégés par les droits d'auteur et autres droits de propriété intellectuelle.  
-      Vous ne pouvez pas reproduire, distribuer ou modifier ces contenus sans autorisation écrite.  
-      Vos données d'entraînement vous appartiennent et vous pouvez les exporter à tout moment.
-    </p>
+      <h2>Propriété intellectuelle</h2>
+      <p>
+        Tous les contenus de GymFocus (textes, images, logos, code) sont protégés par les droits d'auteur et autres droits de propriété intellectuelle.  
+        Vous ne pouvez pas reproduire, distribuer ou modifier ces contenus sans autorisation écrite.  
+        Vos données d'entraînement vous appartiennent et vous pouvez les exporter à tout moment.
+      </p>
 
-    <h2>Résiliation</h2>
-    <p>
-      Vous pouvez supprimer votre compte à tout moment depuis les paramètres de l'application.  
-      Nous nous réservons le droit de suspendre ou supprimer votre compte en cas de violation de ces conditions.  
-      En cas de résiliation, vos données seront supprimées conformément à notre politique de confidentialité.
-    </p>
+      <h2>Résiliation</h2>
+      <p>
+        Vous pouvez supprimer votre compte à tout moment depuis les paramètres de l'application.  
+        Nous nous réservons le droit de suspendre ou supprimer votre compte en cas de violation de ces conditions.  
+        En cas de résiliation, vos données seront supprimées conformément à notre politique de confidentialité.
+      </p>
 
-    <h2>Nous contacter</h2>
-    <p>
-      Pour toute question concernant ces conditions d'utilisation, contactez-nous à :  
-      <strong>Support 100% digital – <a href="mailto:contactgymfocus@gmail.com">contactgymfocus@gmail.com</a></strong>
-    </p>
+      <h2>Nous contacter</h2>
+      <p>
+        Pour toute question concernant ces conditions d'utilisation, contactez-nous à :  
+        <strong>Support 100% digital – <a href="mailto:contactgymfocus@gmail.com">contactgymfocus@gmail.com</a></strong>
+      </p>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 GymFocus - Tous droits réservés | 
-    <a href="privacy.html">Confidentialité</a>
+    <div class="foot">
+      <small>© 2025 GYMFOCUS — Tous droits réservés</small>
+      <div>
+        <a href="privacy.html">Politique de confidentialité</a> ·
+        <a href="terms.html" aria-current="page">Conditions d’utilisation</a> ·
+        <a href="refund-policy.html">Politique de remboursement</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
