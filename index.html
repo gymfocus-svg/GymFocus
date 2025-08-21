@@ -3,81 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GYMFOCUS</title>
+  <title>GymFocus - Restez concentré sur vos entraînements</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #111; /* fond sombre */
-      color: white; /* texte en blanc */
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0d1117;
+      color: #fff;
     }
 
-    header {
-      background-color: #222;
-      padding: 1rem;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      letter-spacing: 2px;
-    }
-
+    /* Menu */
     nav {
-      margin-top: 0.5rem;
+      background: #161b22;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
-
-    nav a {
-      color: white; /* liens en blanc */
-      margin: 0 15px;
-      text-decoration: none;
+    nav .logo {
+      font-size: 1.5rem;
       font-weight: bold;
+      color: #58a6ff;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
       transition: color 0.3s;
     }
-
-    nav a:hover {
-      color: #00aaff; /* effet hover bleu clair */
+    nav ul li a:hover {
+      color: #58a6ff;
     }
 
-    main {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+    /* Hero */
+    .hero {
       text-align: center;
-      padding: 2rem;
+      padding: 80px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      color: #58a6ff;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #c9d1d9;
+      max-width: 600px;
+      margin: auto;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 12px 25px;
+      background: #58a6ff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+    .btn:hover {
+      background: #1f6feb;
     }
 
+    /* Footer */
     footer {
-      background-color: #222;
-      padding: 1rem;
+      background: #161b22;
       text-align: center;
+      padding: 20px;
+      margin-top: 50px;
       font-size: 0.9rem;
+      color: #8b949e;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>GYMFOCUS</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="privacy.html">Confidentialité</a>
-      <a href="terms.html">Conditions</a>
-      <a href="legal.html">Mentions légales</a>
-    </nav>
-  </header>
 
-  <main>
-    <h2>Bienvenue sur GYMFOCUS</h2>
-    <p>Votre espace pour rester concentré sur vos entraînements.</p>
-  </main>
+  <!-- Menu -->
+  <nav>
+    <div class="logo">GymFocus</div>
+    <ul>
+      <li><a href="privacy.html">Confidentialité</a></li>
+      <li><a href="terms.html">Conditions</a></li>
+      <li><a href="refund-policy.html">Remboursements</a></li>
+    </ul>
+  </nav>
 
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Concentrez-vous sur vos entraînements</h1>
+    <p>
+      GymFocus transforme votre téléphone en mode "dumbphone" pendant vos séances.  
+      Suivez vos séries, évitez les distractions et améliorez vos performances.  
+      Idéal pour tous les sportifs, du débutant au professionnel.
+    </p>
+    <a href="#" class="btn">Télécharger l’application</a>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    &copy; 2025 GYMFOCUS - Tous droits réservés
+    © 2025 GymFocus. Tous droits réservés.
   </footer>
+
 </body>
 </html>
