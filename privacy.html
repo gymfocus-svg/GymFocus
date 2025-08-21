@@ -1,124 +1,122 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Politique de Confidentialité - GymFocus</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Politique de confidentialité — GYMFOCUS</title>
+  <meta name="description" content="Politique de confidentialité de l'application GymFocus. Dernière mise à jour : 6 janvier 2025." />
+  <link rel="icon" href="favicon.png" />
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #a259ff;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
+    :root{
+      --bg:#0a0a0a;
+      --panel:#141414;
+      --text:#e9e9ef;
+      --muted:#c9c9d3;
+      --primary:#a259ff;
+      --stroke:#222;
+      --radius:14px;
     }
-    header {
-      background-color: #1e1e1e;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2em;
-      color: #a259ff;
-    }
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
-    h2 {
-      color: #ffffff;
-      border-bottom: 2px solid #a259ff;
-      padding-bottom: 5px;
-      margin-top: 30px;
-    }
-    ul {
-      margin: 10px 0 20px 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    footer {
-      background-color: #1e1e1e;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-      color: #777;
-    }
-    a {
-      color: #a259ff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.65}
+    header{position:sticky;top:0;z-index:50;background:rgba(10,10,10,.8);backdrop-filter:blur(8px);border-bottom:1px solid var(--stroke)}
+    .bar{max-width:1000px;margin:0 auto;padding:14px 18px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-weight:800;letter-spacing:.4px;color:var(--primary);text-decoration:none}
+    nav a{color:var(--text);opacity:.9;text-decoration:none;margin-left:18px}
+    nav a:hover{color:var(--primary)}
+    main{max-width:900px;margin:32px auto;padding:0 18px}
+    h1{font-size:clamp(24px,4.2vw,34px);margin:4px 0 8px;color:var(--primary)}
+    h2{font-size:clamp(18px,3.4vw,22px);margin:28px 0 8px;color:var(--primary)}
+    .lead{color:var(--muted);margin-bottom:18px}
+    .paper{background:var(--panel);border:1px solid var(--stroke);border-radius:var(--radius);padding:20px}
+    ul,ol{margin:0 0 10px 20px}
+    li{margin:6px 0}
+    a{color:var(--primary)}
+    footer{border-top:1px solid var(--stroke);margin-top:34px}
+    .foot{max-width:1000px;margin:0 auto;padding:16px 18px;color:#bdbdcc;display:flex;gap:12px;justify-content:space-between;flex-wrap:wrap}
+    .foot a{color:var(--primary);text-decoration:none}
+    .foot a:hover{text-decoration:underline}
   </style>
 </head>
 <body>
   <header>
-    <h1>Politique de Confidentialité</h1>
-    <p>Votre vie privée nous tient à cœur</p>
+    <div class="bar">
+      <a class="logo" href="index.html">GYMFOCUS</a>
+      <nav aria-label="Navigation">
+        <a href="index.html">Accueil</a>
+        <a href="privacy.html" aria-current="page">Confidentialité</a>
+        <a href="terms.html">Conditions</a>
+        <a href="refund-policy.html">Remboursement</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <p><em>Dernière mise à jour : 6 janvier 2025</em></p>
+    <h1>Politique de confidentialité</h1>
+    <p class="lead"><em>Dernière mise à jour : 6 janvier 2025</em></p>
 
-    <h2>Données collectées</h2>
-    <ul>
-      <li>Informations de compte : email, nom complet</li>
-      <li>Données d'entraînement : séries, exercices, durée des sessions</li>
-      <li>Statistiques de performance : progrès, historique</li>
-      <li>Données techniques : type d'appareil, version de l'app</li>
-      <li>Informations de paiement : gérées par Stripe (nous ne stockons pas vos données bancaires)</li>
-    </ul>
+    <div class="paper">
+      <h2>Données collectées</h2>
+      <ul>
+        <li>Informations de compte : email, nom complet</li>
+        <li>Données d'entraînement : séries, exercices, durée des sessions</li>
+        <li>Statistiques de performance : progrès, historique</li>
+        <li>Données techniques : type d'appareil, version de l'app</li>
+        <li>Informations de paiement : gérées par Stripe (nous ne stockons pas vos données bancaires)</li>
+      </ul>
 
-    <h2>Utilisation des données</h2>
-    <ul>
-      <li>Fournir et améliorer nos services</li>
-      <li>Personnaliser votre expérience d'entraînement</li>
-      <li>Générer vos statistiques et suivre vos progrès</li>
-      <li>Traiter vos paiements et gérer votre abonnement</li>
-      <li>Vous envoyer des notifications importantes</li>
-      <li>Analyser l'utilisation pour améliorer l'application</li>
-    </ul>
+      <h2>Utilisation des données</h2>
+      <ul>
+        <li>Fournir et améliorer nos services</li>
+        <li>Personnaliser votre expérience d'entraînement</li>
+        <li>Générer vos statistiques et suivre vos progrès</li>
+        <li>Traiter vos paiements et gérer votre abonnement</li>
+        <li>Vous envoyer des notifications importantes</li>
+        <li>Analyser l'utilisation pour améliorer l'application</li>
+      </ul>
 
-    <h2>Protection des données</h2>
-    <ul>
-      <li>Chiffrement de toutes les données en transit et au repos</li>
-      <li>Hébergement sécurisé sur Supabase avec certification SOC 2</li>
-      <li>Accès limité aux données par notre équipe</li>
-      <li>Audits de sécurité réguliers</li>
-      <li>Conformité RGPD pour les utilisateurs européens</li>
-      <li>Sauvegarde automatique et redondance des données</li>
-    </ul>
+      <h2>Protection des données</h2>
+      <ul>
+        <li>Chiffrement de toutes les données en transit et au repos</li>
+        <li>Hébergement sécurisé sur Supabase avec certification SOC 2</li>
+        <li>Accès limité aux données par notre équipe</li>
+        <li>Audits de sécurité réguliers</li>
+        <li>Conformité RGPD pour les utilisateurs européens</li>
+        <li>Sauvegarde automatique et redondance des données</li>
+      </ul>
 
-    <h2>Partage des données</h2>
-    <ul>
-      <li>Nous ne vendons jamais vos données personnelles</li>
-      <li>Partage limité avec nos prestataires de services (Stripe, Supabase)</li>
-      <li>Données anonymisées pour l'analyse et l'amélioration</li>
-      <li>Divulgation uniquement si requis par la loi</li>
-      <li>Aucun partage avec des tiers à des fins marketing</li>
-    </ul>
+      <h2>Partage des données</h2>
+      <ul>
+        <li>Nous ne vendons jamais vos données personnelles</li>
+        <li>Partage limité avec nos prestataires de services (Stripe, Supabase)</li>
+        <li>Données anonymisées pour l'analyse et l'amélioration</li>
+        <li>Divulgation uniquement si requis par la loi</li>
+        <li>Aucun partage avec des tiers à des fins marketing</li>
+      </ul>
 
-    <h2>Vos droits</h2>
-    <p>
-      Vous avez le droit d'accéder, de modifier, de supprimer vos données personnelles ou de limiter leur traitement.  
-      Vous pouvez également demander la portabilité de vos données ou vous opposer à leur traitement.  
-      Pour exercer ces droits, contactez-nous à : <a href="mailto:contactgymfocus@gmail.com">contactgymfocus@gmail.com</a>
-    </p>
+      <h2>Vos droits</h2>
+      <p>
+        Vous avez le droit d'accéder, de modifier, de supprimer vos données personnelles ou de limiter leur traitement.  
+        Vous pouvez également demander la portabilité de vos données ou vous opposer à leur traitement.  
+        Pour exercer ces droits, contactez-nous à : <a href="mailto:contactgymfocus@gmail.com">contactgymfocus@gmail.com</a>
+      </p>
 
-    <h2>Nous contacter</h2>
-    <p>
-      Pour toute question concernant cette politique de confidentialité ou le traitement de vos données, contactez-nous à :  
-      <strong>Support 100% digital – contactgymfocus@gmail.com</strong>
-    </p>
+      <h2>Nous contacter</h2>
+      <p>
+        Pour toute question concernant cette politique de confidentialité ou le traitement de vos données, contactez-nous à :  
+        <strong>Support 100% digital – <a href="mailto:contactgymfocus@gmail.com">contactgymfocus@gmail.com</a></strong>
+      </p>
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 GymFocus - Tous droits réservés
+    <div class="foot">
+      <small>© 2025 GYMFOCUS — Tous droits réservés</small>
+      <div>
+        <a href="privacy.html" aria-current="page">Politique de confidentialité</a> ·
+        <a href="terms.html">Conditions d’utilisation</a> ·
+        <a href="refund-policy.html">Politique de remboursement</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
